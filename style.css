@@ -1372,6 +1372,39 @@ body.page-servicios .hero-section{
 /* ======== ESTILOS RESPONSIVOS ==========  */
 /* ======================================= */
 
+/* ======================================= */
+/* === Ajustes para Telas MUITO Pequenas === */
+/* ======================================= */
+
+@media (max-width: 480px) { /*Correção da página servicios, em telas menores como iphone X e o 7, estava saindo dos limites da responsividade*/
+    .service-title h2 {
+        font-size: 1.5rem; 
+        line-height: 1.2;  
+        padding: 0 10px;   
+        white-space: normal; 
+        word-break: break-word; 
+    }
+
+   
+    .hero-content img {
+        max-width: 80%; 
+        height: auto;   
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    .hero-content p { 
+        font-size: 1.2rem; 
+        padding: 0 10px; 
+    }
+
+    .hero-content {
+        padding: 20px 10px; 
+        overflow: hidden; 
+    }
+}
+
+
 @media (max-width: 768px) {
 
     /* --- CABEÇALHO E ÍCONES --- */
