@@ -1419,7 +1419,7 @@ body.page-servicios .hero-section{
         font-size: 1.5em;
         cursor: pointer;
         background: none; border: none;
-        color: black;
+        color: rgb(42, 38, 38);
     }
 
 
@@ -1457,7 +1457,7 @@ body.page-servicios .hero-section{
         font-size: 1.8em;
         cursor: pointer;
         background: none; border: none;
-        color: black;
+        color: rgb(42, 38, 38);
     }
 
     /* --- ITENS DO MENU --- */
