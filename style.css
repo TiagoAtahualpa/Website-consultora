@@ -1419,6 +1419,7 @@ body.page-servicios .hero-section{
         font-size: 1.5em;
         cursor: pointer;
         background: none; border: none;
+        color: black;
     }
 
 
@@ -1456,6 +1457,7 @@ body.page-servicios .hero-section{
         font-size: 1.8em;
         cursor: pointer;
         background: none; border: none;
+        color: black;
     }
 
     /* --- ITENS DO MENU --- */
@@ -1587,14 +1589,18 @@ body.page-servicios .hero-section{
 /* Garante que o texto fique centralizado quando empilhado */
 .info-block-text {
     text-align: left;
-    max-width: 100%; /* Permite que o texto ocupe toda a largura */
+    max-width: 100%; 
     font-size: 1.2em;
+}
+
+/* Adicione esta regra para garantir que o layout reverso também vire uma coluna */
+.info-block.reverse-layout {
+    flex-direction: column;
 }
  
 /* Ajusta os blocos dos membros da equipe */
 .team-member,
 .team-member.reverse-layout {
-    /* Força o layout de coluna para os dois */
     flex-direction: column;
     padding: 40px 20px;
     gap: 20px;
@@ -1603,7 +1609,7 @@ body.page-servicios .hero-section{
 /* Garante que o texto venha PRIMEIRO na pilha, para AMBOS */
 .team-member .member-text-container {
     order: 1;
-    text-align: left; /* Alinhado à esquerda */
+    text-align: left;
     max-width: 100%;
 }
 
@@ -1703,7 +1709,6 @@ body.page-servicios .hero-section{
     padding: 0 20px;
 }
 
-/* --- Ajustes nos Banners --- */
 
 .service-banner {
     padding: 60px 20px; 
@@ -1714,21 +1719,18 @@ body.page-servicios .hero-section{
     gap: 25px;
 }
 
-/* Ajusta as colunas de título e detalhes quando empilhadas */
 .service-title,
 .service-details {
-    flex: 1 1 100%; /* Permite que ocupem 100% da largura */
+    flex: 1 1 100%; 
     width: 100%;
     text-align: center;
 }
 
-/* Reduz o tamanho da fonte dos títulos dos banners */
 .service-title h2 {
     font-size: 2.5em; 
     
 }
 
-/* Faz com que a lista de tópicos fique centralizada mas com texto à esquerda */
 .service-details ul {
     display: inline-block; 
     text-align: left;    
