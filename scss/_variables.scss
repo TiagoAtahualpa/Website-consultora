@@ -1,0 +1,28 @@
+:root {
+    --main-color: #ff5722; /*rgba(231, 64, 35, 1)  provavel atualização da main-color*/ 
+    --secondary-color: #222;
+    --text-color: #333;
+    --light-text-color: #f0f0f0;
+    --dark-bg: #2b2b2b;
+    --body-font: Arial, sans-serif;
+    --heading-font: 'Bebas Neue', cursive;
+    --slogan-font: 'Pacifico', cursive;
+}
+
+
+//font do H1 (teste)
+@font-face {
+  // 1. Este é o NOME que você usará na regra font-family
+  font-family: 'Swis721 BT Black'; 
+  
+  // 2. Tenta carregar localmente se já estiver instalado no PC
+  src: fonts('Swis721 Blk BT Black'), 
+       
+       // 3. ONDE ESTÁ O ARQUIVO NO SEU PROJETO (Caminho relativo ao arquivo CSS final)
+       // Certifique-se que o caminho 'fonts/' está correto
+       url('../fonts/Swiss721BT-Black.woff') format('woff2'),
+       url('../fonts/Swiss721BT-Black.woff2') format('woff');
+       
+  // 4. Propriedade para controle de carregamento (opcional, mas recomendado)
+  font-display: swap;
+}

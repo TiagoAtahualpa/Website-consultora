@@ -1,0 +1,81 @@
+/* ================================================= */
+/* ESTILOS DA PÁGINA CLIMA Y CULTURA    */
+/* ================================================= */
+
+/* --- Hero Section das Páginas de Serviço --- */
+
+/* Imagem de fundo específica para a página de Capacitaciones */
+body.page-clima .hero-section {
+    background-image: url('../servicios/img/clima-cultura-imgFUNDO.jpg');
+    background-position: center 55%;
+}
+
+.hero-page-title {
+    font-family: var(--heading-font);
+    font-size: 4em; /* 64px */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+}
+
+.hero-divider {
+    border: none;
+    border-top: 12px solid var(--main-color);
+    width: 1000px;
+    margin: 15px auto 0;
+}
+
+.hero-content h2 {
+    font-size: 60px;
+    margin-bottom: 0; 
+}
+
+/* --- Conteúdo Principal --- */
+
+/* HR laranja no final da seção de conteúdo */
+.content-divider {
+    border: none;
+    border-top: 3px solid var(--main-color);
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+
+
+
+body.page-clima .info-block-image  {
+    flex: none;
+    width: 600px; 
+    max-width: none;
+}
+
+body.page-clima .info-block {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;  
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 100px;
+    max-width: 12000px;
+    margin: 0 auto;
+}
+
+.page-clima .info-block h2{
+    font-size: 65px;
+}
+
+.page-clima .info-block p {
+    font-size: 25px;
+}
+
+.page-clima .hero-divider {
+    border: none;
+    border-top: 12px solid rgba(231, 64, 35, 1);
+    width: 1200px;
+    margin: 15px auto 0;
+}
+
+
+
+
+

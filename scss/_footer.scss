@@ -1,0 +1,82 @@
+/* Rodapé */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text-color);
+    padding: 60px 40px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-left: 50px; /*Centralizei mais os elementos da footer*/
+}
+
+.footer-column h6 {
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column p {
+    margin-bottom: 8px;
+}
+
+.footer-column i {
+    margin-right: 8px;
+    color: var(--main-color);
+}
+
+.footer-social-icons a {
+    color: var(--light-text-color);
+    margin-right: 15px;
+}
+
+
+/* EFEITO HOVER PARA LINKS NO RODAPÉ  */
+
+/* Define a transição suave para a mudança de cor (laranja) */
+.footer-column ul li a {
+    transition: color 0.2s ease;
+}
+
+/* Muda a cor do link para laranja ao passar o mouse */
+.footer-column ul li a:hover {
+    color: var(--main-color); /* Usa a cor laranja principal do site */
+}
+
+
+
+
+
+/* ======================================= */
+/* ======== ESTILOS RESPONSIVOS ==========  */
+/* ======================================= */
+
+@media (max-width: 768px) {
+
+  .footer-grid {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+       }
+       .footer-column {
+         margin-left: 0;
+       }
+
+ }

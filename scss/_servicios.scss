@@ -1,0 +1,219 @@
+/* ======================================= */
+/* ESTILOS DA PÁGINA SERVICIOS (BANNERS)   */
+/* ======================================= */
+
+
+/*Imagem da página servicios*/
+body.page-servicios .hero-section{
+    background-image: url('../img/serviciosIMG.jpg') ;
+}
+
+
+/*  Inicio/Servicios*/
+.page-servicios .breadcrumb-nav {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #666;
+    margin-left: 300px;
+    margin-bottom: 30px;
+}
+
+
+.service-banner {
+    position: relative;
+    padding: 80px 40px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+
+.page-servicios .hero-content img{
+     height: auto;
+    width: 350px;
+    /*opacity: 0.5;*/
+}
+
+/* Overlay escuro para melhorar a legibilidade do texto */
+.service-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.service-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.service-title {
+    flex: 1;
+    text-align: center;
+}
+
+.service-title h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5em; /* 56px */
+    line-height: 1.2;
+    color: var(--main-color); /* Laranja para destaque */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.service-details {
+    flex: 1;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-details li {
+    font-size: 1.1em; /* 17.6px */
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+
+.service-details li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--main-color); /* Laranja */
+    font-size: 0.8em;
+}
+
+/* Inverte a ordem para o layout alternado */
+.service-banner.layout-reverse .service-content {
+    flex-direction: row-reverse;
+}
+
+/* --------------------------------------- */
+/* --- IMAGENS DE FUNDO ESPECÍFICAS PARA CADA SERVIÇO --- */
+   
+#capacitaciones {
+    background-image: url('../img/CapacitacionesFundoServicios.jpg');
+}
+
+#clima-cultura {
+    background-image: url('../img/CulturaServicios-FUNDO.png');
+}
+
+#personal-branding {
+    background-image: url('../img/PERSONALBRADING-SRVICIOS.jpg');
+}
+
+#talleres {
+    background-image: url('../img/TALLERES-SERVICIOSFUNDO.jpeg');
+}
+
+#reclutamiento {
+    background-image: url('../img/Reclutamiento-FUNDOSERVICIOS.jpg');
+}
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+/* ======== ESTILOS RESPONSIVOS ==========  */
+/* ======================================= */
+
+
+
+/* ======================================= */
+/* RESPONSIVIDADE PÁGINA 'SERVICIOS' */
+/* ======================================= */
+
+@media (max-width: 480px) { /*Correção da página servicios, em telas menores como iphone X e o 7, estava saindo dos limites da responsividade*/
+    .service-title h2 {
+        font-size: 1.5rem; 
+        line-height: 1.2;  
+        padding: 0 10px;   
+        white-space: normal; 
+        word-break: break-word; 
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .hero-content h2 {
+    font-size: 2.2em; 
+    overflow-wrap: break-word; 
+    padding: 0 15px;
+}
+
+    .hero-content img {
+        width: 80%;
+        max-width: 350px;
+    }
+
+
+
+
+/* --- Ajustes Gerais --- */
+
+.page-servicios .breadcrumb-nav {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* --- Ajustes nos Banners --- */
+
+.service-banner {
+    padding: 60px 20px; 
+}
+
+.service-content {
+    flex-direction: column; 
+    gap: 25px;
+}
+
+/* Ajusta as colunas de título e detalhes quando empilhadas */
+.service-title,
+.service-details {
+    flex: 1 1 100%; /* Permite que ocupem 100% da largura */
+    width: 100%;
+    text-align: center;
+}
+
+/* Reduz o tamanho da fonte dos títulos dos banners */
+.service-title h2 {
+    font-size: 2.5em; 
+    
+}
+
+/* Faz com que a lista de tópicos fique centralizada mas com texto à esquerda */
+.service-details ul {
+    display: inline-block; 
+    text-align: left;    
+}
+
+
+}

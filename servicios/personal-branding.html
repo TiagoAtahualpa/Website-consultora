@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bedregal Consultora</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="../img/FAVICON-final.png">
 </head>
@@ -17,7 +17,7 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <a href="#" class="logo-link">
+        <a href="../index.html" class="logo-link">
             <div class="logo-and-name">
                 <img src="img/LOGOS - MARCA BEDREGAL.png" alt="Logo Bedregal">
                 <h1>BEDREGAL CONSULTORA</h1>
@@ -30,7 +30,20 @@
 
             <ul>
                 <li class="nav-item"><a href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a href="../nosotros.html">Nosotros</a></li>
+                <li class="nav-item has-submenu">
+                    <a href="../nosotros.html">Nosotros</a>
+
+                    <span class="submenu-toggle">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                    <ul class="submenu">
+                        <li class="nav-item"><a href="nosotros.html#mision">Nuestra misión</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestra-vision">Nuestra visión</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestros-valores">ADN empresarial</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestro-equipo">Nuestro equipo</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item has-submenu">
                     <a href="../servicios.html">Servicios</a>
                     <span class="submenu-toggle">
@@ -44,6 +57,7 @@
                         <li class="nav-item"><a href="reclutamiento.html">Reclutamiento y Seleccion</a></li>
                     </ul>
                 </li>
+                <li class="nav-item"><a href="../galeria.html">Galeria</a></li>
                 <li class="nav-item"><a href="../contactenos.html">Contáctenos</a></li>
             </ul>
         </nav>
@@ -64,7 +78,8 @@
             <div class="info-block-text">
                 <h2 class="section-heading">Construye tu identidad, proyecta tu valor </h2>
                 <p>
-                    En <span>BEDREGAL CONSULTORA</span> acompañamos a profesionales en el desarrollo de su marca personal,
+                    En <span>BEDREGAL CONSULTORA</span> acompañamos a profesionales en el desarrollo de su marca
+                    personal,
                     potenciando sus fortalezas y diferenciándolos en su entorno laboral y social. A través de
                     estrategias de autoconocimiento, comunicación efectiva y proyección profesional, ayudamos a
                     construir una identidad sólida, auténtica y coherente, que impulse su crecimiento y genere impacto
@@ -116,11 +131,11 @@
                             class="fa-brands fa-facebook-f fa-lg"></i></a>
                     <a href="https://www.tiktok.com/@consultorabedregal" target="_blank"><i
                             class="fa-brands fa-tiktok fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/bedregal-consultora" target="_blank"><i
+                            class="fa-brands fa-linkedin fa-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-   <script src="../script.js" defer></script>
+    <script src="../script.js" defer></script>
 </body>
-
-</html>

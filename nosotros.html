@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bedregal Consultora</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="img/FAVICON-final.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body class="page-nosotros">
@@ -18,7 +18,7 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <a href="#" class="logo-link">
+        <a href="index.html" class="logo-link">
             <div class="logo-and-name">
                 <img src="img/LOGOS - MARCA BEDREGAL.png" alt="Logo Bedregal">
                 <h1>BEDREGAL CONSULTORA</h1>
@@ -32,7 +32,20 @@
 
             <ul>
                 <li class="nav-item "><a href="index.html">Inicio</a></li>
-                <li class="nav-item active"><a href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item has-submenu active">
+                    <a href="nosotros.html">Nosotros</a>
+
+                    <span class="submenu-toggle">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                    <ul class="submenu">
+                        <li class="nav-item"><a href="nosotros.html#mision">Nuestra misión</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestra-vision">Nuestra visión</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestros-valores">ADN empresarial</a></li>
+                        <li class="nav-item"><a href="nosotros.html#nuestro-equipo">Nuestro equipo</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item has-submenu">
                     <a href="servicios.html">Servicios</a>
                     <span class="submenu-toggle">
@@ -47,6 +60,7 @@
                         <li class="nav-item"><a href="servicios/reclutamiento.html">Reclutamiento y Seleccion</a></li>
                     </ul>
                 </li>
+                <li class="nav-item"><a href="galeria.html">Galeria</a></li>
                 <li class="nav-item"><a href="contactenos.html">Contáctenos</a></li>
             </ul>
         </nav>
@@ -90,27 +104,34 @@
 
         <section class="info-block" id="nuestra-vision">
             <div class="info-block-image">
-                <img src="img/vision.png" alt="Ícone de Visão">
+                <img src="img/visionOrange.png" alt="Ícone de Visão">
             </div>
             <div class="info-block-text">
                 <h2 class="section-heading">NUESTRA <span>VISIÓN</span></h2>
                 <p>Brindar servicios de Gestión del Talento Humano, dedicando-nos a trabajar con las empresas para
                     mejorar su desempeño, obter resultados y generar benefícios en sus modalidades de selección de
-                    personal, reclutamento, headhunting de los mejores talentos locales, capacitación y evaluación.</p>
+                    personal, reclutamiento, headhunting de los mejores talentos locales, capacitación y evaluación.</p>
             </div>
         </section>
 
         <section class="info-block alt-bg reverse-layout" id="nuestros-valores">
             <div class="info-block-image">
-                <img src="img/valores.png" alt="Ícone de Valores">
+                <img src="img/valoresOrange.png" alt="Ícone de Valores">
             </div>
             <div class="info-block-text">
-                <h2 class="section-heading">NUESTROS <span>VALORES</span></h2>
-                <p>En Bedregal Consultora, nuestros valores son la efectividad, el trabajo en equipo, el compromisso, la
-                    determinación y la ética profesional. Estos principios guían cada una de nuestras acciones y
-                    decisiones, asegurando que brindemos un servicio de calidad y confianza en la gestión del talento
-                    humano.</p>
+                <h2 class="section-heading">ADN <span>EMPRESARIAL</span></h2>
 
+                <p> Con más de 18 años de trayectoria, Bedregal Consultora ha construido su prestigio sobre principios
+                    que reflejan su identidad, compromiso y forma de trabajar. Estos valores guían cada una de sus
+                    acciones y representan la base de su cultura organizacional: </p>
+
+                <ul>
+                    <li>Efectividad</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Compromiso</li>
+                    <li>Determinación</li>
+                    <li>Ética profesional</li>
+                </ul>
             </div>
         </section>
 
@@ -146,7 +167,25 @@
                         educativo y clínico.</p>
                 </div>
             </div>
+
+            <hr>
+            <h2 class="section-heading team-heading">EL <span>EQUIPO</span></h2>
+            <div class="team-member">
+                <div class="member-image-container">
+                    <img src="img/" alt="Foto del quipo">
+                </div>
+                <div class="member-text-container">
+                    <p>El talento de Bedregal Consultora está conformado por estudiantes, egresados, bachilleres y
+                        titulados altamente capacitados en el área organizacional, con formación en universidades como:
+                        Universidad Nacional de San Agustín, Universidad Tecnológica del Perú, Universidad Continental,
+                        Universidad Católica San Pablo y Universidad Católica de Santa María, integrando distintas
+                        visiones y estrategias para fortalecer nuestros servicios e innovar constantemente en el área.
+                    </p>
+                </div>
+            </div>
         </section>
+
+
 
     </main>
 
@@ -187,11 +226,13 @@
                             class="fa-brands fa-facebook-f fa-lg"></i></a>
                     <a href="https://www.tiktok.com/@consultorabedregal" target="_blank"><i
                             class="fa-brands fa-tiktok fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/bedregal-consultora" target="_blank"><i
+                            class="fa-brands fa-linkedin fa-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-   <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

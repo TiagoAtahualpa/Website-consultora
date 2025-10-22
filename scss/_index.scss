@@ -1,0 +1,239 @@
+
+/* Seção Hero */
+.hero-section {
+    position: relative;
+    height: 60vh;
+   /*Index imagem*/
+   /* background-image: url('../img/img-inicio.jpg'); ------- removendo-----*/
+    background-size: cover;
+    background-position: center 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+     /*  Aumentei a opacidade para 0.6 para um efeito mais escuro */
+    box-shadow: inset 0 0 0 1000px rgba(52, 34, 34, 0.6);
+}
+
+/* --- Ajuste na Seção Hero --- */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content img {
+    height: auto;
+    width: 400px;
+}
+
+.hero-cta {
+    position: absolute; 
+    bottom: 0; /*  A barra fica no na parte de baixo da seção */
+    left: 0;
+    background-color: rgba(231, 64, 35, 1);
+    width: 100%;
+    padding: 25px 0; /*Padding estava 30px, fazendo testes*/
+    text-align: center;
+    color: white;
+    font-family: Pacifico, arial;
+    font-size: 20px;
+    margin-bottom: -70px;
+    
+}
+.hero-cta h2{
+    font-weight: normal;
+}
+
+/* Seção de Boas-Vindas */
+.welcome-section {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 80px 40px;
+ gap: 60px;
+ background-color: var(--light-bg);
+ margin-top: 10px; /*Teste para deixar a secçao welcome mais pra baixo para melhor visualização da img de fundo*/
+}
+
+.welcome-image-container {
+/* Força o container a ter um tamanho fixo e quadrado */
+    flex: none; /* Não permite que o flexbox estique o container */
+    width: 280px;
+    height: 280px; 
+    overflow: hidden; /* Corta o excesso da imagem que sair deste quadrado */
+    
+    /* Regras de alinhamento */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.welcome-image-container img {
+ /* A imagem preenche o container quadrado, cortando o excesso */
+ width: 100%;
+ height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer, mas cortando o que não couber */
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.welcome-text-container {
+ flex: 2;
+ max-width: 600px;
+ text-align: center; 
+}
+
+.welcome-text-container span{
+    font-weight: bold;
+}
+
+.welcome-text-container h3 {
+ font-family: var(--heading-font);
+ font-size: 3.2em;
+ margin-bottom: 30px; /* Espaçamento maior abaixo do título */
+ color: #444; /* Cor mais suave para o título */
+ font-weight: normal;
+}
+
+.welcome-text-container p {
+    font-size: 1.5em; 
+    line-height: 1.6; 
+}
+
+/* Estilo para a linha separadora ( hr ) */
+.welcome-divider {
+    border: none;
+    border-top: 3.5px solid var(--secondary-color); /* Linha escura como na referência */
+    width: 90%; /* Ocupa a largura total */
+    max-width: 1000px; /* Limita a largura para ficar mais centralizado no layout */
+    margin: 1px auto; 
+}
+
+/* Seção Nossos Serviços */
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.services-section h4 {
+    font-family: var(--heading-font);
+    font-size: 2.2em;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.services-section span{
+    font-weight: bold;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    /* Força todos os itens do grid a terem uma proporção de 1 por 1 (quadrado) */
+    aspect-ratio: 1 / 1;
+}
+
+.service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* zoom suave */
+
+}
+
+/* efeito de zoom ao passar o mouse */
+.service-item:hover img {
+    transform: scale(1.05);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--heading-font);
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover .service-overlay {
+    opacity: 0.9;
+}
+
+.service-overlay i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.service-overlay h5 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.services-section hr {
+    border: none;
+    border-top: 3px solid var(--main-color);
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+/* ======== ESTILOS RESPONSIVOS ==========  */
+/* ======================================= */
+
+@media (max-width: 768px) {
+
+
+    .welcome-section {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+    .welcome-text-container h3, .section-heading, .hero-page-title, .team-heading {
+        font-size: 2.2em;
+    }
+    .welcome-text-container p { 
+        font-size: 1.2em; 
+    }
+
+}
