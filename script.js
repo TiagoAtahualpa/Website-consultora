@@ -2,17 +2,21 @@
 const hamburgerButton = document.getElementById('hamburger');
 const closeMenuButton = document.getElementById('close-menu');
 const navMenu = document.getElementById('main-nav');
-const submenuToggle = document.querySelector('.submenu-toggle');
-const submenuContainer = document.querySelector('.has-submenu');
+const submenuToggles = document.querySelectorAll('.submenu-toggle');
 
 
-// Função para FECHAR o menu principal e RESETAR o submenu
+// Função para FECHAR o menu principal e RESETAR todos os submenus
 function closeMainMenu() {
     navMenu.classList.remove('is-active');
-    // Garante que o submenu volte a fechar ao fechar o menu principal
-    submenuContainer.classList.remove('submenu-active'); 
+    
+    // Itera sobre todos os itens de menu que podem ter submenu e remove a classe ativa
+    const allSubmenuContainers = document.querySelectorAll('.nav-item.has-submenu');
+    allSubmenuContainers.forEach(container => {
+        container.classList.remove('submenu-active');
+    });
 }
 
+// ----------------------------------------------------
 
 // Abrir o menu com o hambúrguer
 hamburgerButton.addEventListener('click', (event) => {
@@ -25,11 +29,49 @@ closeMenuButton.addEventListener('click', () => {
     closeMainMenu();
 });
 
-// Abrir/fechar o submenu de SERVICIOS ao clicar na SETA
-submenuToggle.addEventListener('click', (event) => {
-    event.stopPropagation();
-    submenuContainer.classList.toggle('submenu-active');
+// ----------------------------------------------------
+// ABRIR/FECHAR SUBMENU AO CLIQUE (para todos os submenus)
+// ----------------------------------------------------
+submenuToggles.forEach(toggle => {
+    
+    toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        
+        // 2. Encontra o <li> pai mais próximo, que é o container do submenu
+        const parentNavItem = toggle.closest('.nav-item.has-submenu');
+
+        const icon = toggle.querySelector('i');
+        
+
+        const allSubmenus = document.querySelectorAll('.nav-item.has-submenu');
+        
+        //Submenu abre e o outro fecha
+        allSubmenus.forEach(item => {
+            // Verifica se o item é DIFERENTE do que estamos clicando
+            if (item !== parentNavItem) {
+                // Se o outro item estiver aberto, feche-o e resete o ícone
+                if (item.classList.contains('submenu-active')) {
+                    item.classList.remove('submenu-active');
+                    
+                    // Reseta o ícone do submenu que foi FECHADO
+                    const otherIcon = item.querySelector('.submenu-toggle i');
+                    if (otherIcon) {
+                        otherIcon.classList.remove('fa-chevron-up');
+                        otherIcon.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+        });
+        // ----------------------------------------------------
+
+        // 3. Alterna a classe 'submenu-active' no elemento pai para abrir/fechar
+        parentNavItem.classList.toggle('submenu-active');
+
+       icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+    });
 });
+// ----------------------------------------------------
 
 // Fechar o menu principal ao clicar FORA dele
 document.addEventListener('click', (event) => {
