@@ -214,7 +214,7 @@ body.page-nosotros .hero-section {
 
 .member-text-container h3 {
     font-family: var(--heading-font);
-    font-size: 3.5em;
+    font-size: 3em;
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
@@ -239,7 +239,6 @@ body.page-nosotros .hero-section {
 /* RESPONSIVIDADE PÁGINA 'NOSOTROS'      */
 /* ======================================= */
 
-/* Centraliza o 'breadcrumb' ("Inicio / Nosotros") */
 .breadcrumb-nav {
     margin-left: 0; 
     text-align: center; 
@@ -257,6 +256,10 @@ body.page-nosotros .hero-section {
     text-align: left;
     max-width: 100%; 
     font-size: 1.2em;
+}
+
+.info-block-text h2{
+    font-size: 3em;
 }
  
 .info-block.reverse-layout {

@@ -45,6 +45,7 @@
     }
 }
 
+
 /*-----------------------------------------------------------------------------*/
 /*--------------------------------------------*/
 /*-------------*/
@@ -74,22 +75,22 @@
 }
 
 .hero-slide-2 { 
-    background-image: url('../img/PERSONALBRANDING-foto.jpeg'); 
+    background-image: url('../img/RECLUTAMIENTOFOTO.jpeg'); 
     background-position: center 33%; 
     // Imagem CLARA: Sombra mais escura (60% ou 0.6) para o texto branco aparecer
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); 
 }
 
 .hero-slide-3 { 
-    background-image: url('../img/SERVICIOSCLIMA.jpg'); 
-    background-position: center 50%; 
+    background-image: url('../img/foto-index.JPG'); 
+    background-position: center 33%; 
     // Imagem ESCURA: Sombra mais leve (20% ou 0.2)
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); 
 }
 
 .hero-slide-4 { 
-    background-image: url('../img/Reclutamiento.png'); 
-    background-position: center 10%; 
+    background-image: url('../img/galeria/galeria12.jpg'); 
+    background-position: center 33%; 
     // Se for uma foto CLARA
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); 
 }
