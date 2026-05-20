@@ -186,7 +186,7 @@ body.page-nosotros .hero-section {
     display: flex;
     gap: 50px;
     align-items: center;
-    padding: 40px 100px;
+    padding: 10px 100px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -203,7 +203,7 @@ body.page-nosotros .hero-section {
 .member-image-container img {
     width: 100%;
     height: auto;
-    max-width: 350px;
+    max-width: 400px;
     border-radius: 5px; 
 }
 
@@ -285,6 +285,7 @@ body.page-nosotros .hero-section {
     max-width: 100%;
     width: 100%;
 }
+
 
 .team-member.reverse-layout .member-image-container img{
     margin-top: 0px;

@@ -13,6 +13,12 @@ function closeMainMenu() {
     const allSubmenuContainers = document.querySelectorAll('.nav-item.has-submenu');
     allSubmenuContainers.forEach(container => {
         container.classList.remove('submenu-active');
+
+        const icon = container.querySelector('.submenu-toggle i');
+        if (icon){                                   // garanti que a seta não vire no desktop
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down')
+        }
     });
 }
 
